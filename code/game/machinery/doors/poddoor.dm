@@ -15,8 +15,8 @@
 	resistance_flags = FIRE_PROOF
 	damage_deflection = 70
 	poddoor = TRUE
-	var/openSound = 'hyperstation/sound/doors/blastDoorOpen.ogg'
-	var/closeSound = 'hyperstation/sound/doors/blastDoorClose.ogg'
+	var/openSound = 'hyperstation/sound/machines/blastDoorOpen.ogg'
+	var/closeSound = 'hyperstation/sound/machines/blastDoorClose.ogg'
 
 /obj/machinery/door/poddoor/preopen
 	icon_state = "open"
@@ -74,10 +74,10 @@
 	switch(animation)
 		if("opening")
 			flick("opening", src)
-			playsound(src, openSound, 25, 0)
+			playsound(src, openSound, 20, 0)
 		if("closing")
 			flick("closing", src)
-			playsound(src, closeSound, 25, 0)
+			playsound(src, closeSound, 20, 0)
 
 /obj/machinery/door/poddoor/update_icon()
 	if(density)
